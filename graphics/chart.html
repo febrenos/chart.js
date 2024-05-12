@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .graph {
+        width: 300px;
+        height: 200px;
+    }
+    
+    #roundedLine {
+        fill: #D0C4FF;
+        stroke: #6E6BFF;
+        color:#ec9393;
+        stroke-width: 2;
+        stroke-linejoin: round;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: conic-gradient(
+            violet 0deg,
+            indigo 36deg,
+            blue 72deg,
+            green 108deg,
+            yellow 144deg,
+            orange 180deg,
+            red 216deg,
+            violet 252deg
+        );
+        animation: spin .001s linear infinite;
+    }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+</style>
+<body>
+    <svg class="graph">
+        <!-- line -->
+        <polyline points="0 150, 50 100, 100 150, 150 80, 200 100, 250 50, 300 150" fill="#D0C4FF" stroke="#6E6BFF" stroke-width="2"></polyline>
+
+        <!-- points -->
+        <circle cy="100" cx="50"  r="3" fill="#403dff" />
+        <circle cy="150" cx="100" r="3" fill="#ec9393" />
+        <circle cy="80"  cx="150" r="3" fill="#403dff" />
+        <circle cy="100" cx="200" r="3" fill="#ec9393" />
+        <circle cy="50"  cx="250" r="3" fill="#403dff" />
+        <circle cy="300" cx="300" r="3" fill="#ec9393" />
+    </svg>
+
+    <svg class="graph">
+        <!-- Linha com vértices arredondados -->
+        <path d="M20 150 Q50 20,
+                80 50 Q110 80,
+                140 50 Q170 20,
+                200 50 Q230 80,
+                260 50 Q290 20,
+                320 150" id="roundedLine"></path>
+    </svg>
+
+    <svg class="graph">
+        <!-- Linha com vértices arredondados -->
+        <path d="M20 150 Q50 20,
+                80 50 Q110 80,
+                150 50 Q170 20,
+                200 50 Q230 80,
+                260 50 Q290 20,
+                320 150" id="roundedLine"></path>
+    </svg>
+
+    <svg class="graph">
+        <!-- Linha com vértices arredondados -->
+        <path d="M0 100 C5 85,
+                5 85,
+                10 70 C15 45,
+                15 45, 
+                20 20 C25 35,
+                25 35, 
+                30 50 C35 25,
+                35 25, 
+                40 0 C45 15,
+                45 15, 
+                50 30 C55 30,
+                55 30, 
+                60 30 C65 65,
+                65 65, 
+                70 100" id="roundedLine"></path>
+    </svg>
+
+    <!-- <div class="circle"> -->
+    </div>
+</body>
+</html>
